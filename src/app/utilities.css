@@ -1,0 +1,55 @@
+/* SCROLLBAR */
+.scrollbar-thin {
+  /* #17191e thumb #454e5b track */
+  scrollbar-color: initial initial;
+  scrollbar-color: var(--scrollbar-thumb, initial)
+    var(--scrollbar-track, initial);
+  scrollbar-width: thin;
+}
+
+/* =====  REACT PHONE NUMBER INPUT OVERRIDES */
+.phone-number-input {
+  margin-top: 0 !important;
+  padding-inline: 0.6rem 0.3rem !important;
+  height: 2.5rem !important;
+  width: 100%;
+}
+
+.PhoneInputCountry {
+  gap: 0.3rem !important;
+  margin-right: 0 !important;
+}
+
+.PhoneInputInput {
+  outline: none;
+  margin-left: 4px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  height: 100%;
+  padding-left: 0.5em;
+}
+
+.PhoneInputInput::placeholder {
+  color: var(--foreground);
+}
+
+/* Remove scrollbar */
+.remove-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  border-radius: 0px;
+}
+
+.remove-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.remove-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 0px;
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+}
