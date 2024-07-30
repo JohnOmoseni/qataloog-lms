@@ -21,16 +21,13 @@ export const ProfileSchema = yup.object().shape({
 });
 
 export const PasswordSchema = yup.object().shape({
-  current_password: yup
-    .string()
-    .matches(/^\+\d{10,15}$/, "Invalid phone number")
-    .required("Field is required"),
+  current_password: yup.string().required("Current password is required"),
   new_password: yup
     .string()
-    .matches(/^\+\d{10,15}$/, "Invalid phone number")
-    .required("Field is required"),
+    .min(8, "New password must be at least 8 characters")
+    .required("New password is required"),
   confirm_password: yup
     .string()
-    .matches(/^\+\d{10,15}$/, "Invalid phone number")
-    .required("Field is required"),
+    .oneOf([yup.ref("new_password"), undefined], "Passwords must match")
+    .required("Please confirm your new password"),
 });

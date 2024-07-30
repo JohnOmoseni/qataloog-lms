@@ -68,7 +68,7 @@ function Subscriptions() {
         <CustomFormField
           fieldType={FormFieldType.INPUT}
           name="fee"
-          label="Subscription Fee (N)"
+          label="Subscription Fee (&#8358;)"
           field={{ value: values.fee }}
           onChange={handleChange}
         />

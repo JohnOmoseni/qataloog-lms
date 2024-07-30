@@ -10,7 +10,7 @@ import { InferType } from "yup";
 import { useFormik } from "formik";
 import { PasswordSchema } from "@/schema";
 import { cn } from "@/lib/utils";
-import { AlertTriangle } from "@/constants/icons";
+import { AlertTriangle, CheckCircle } from "@/constants/icons";
 
 function Password({ user }: { user?: any }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -70,18 +70,31 @@ function Password({ user }: { user?: any }) {
           label="Confirm new password"
           field={{ value: values.confirm_password, type: "password" }}
           onChange={handleChange}
+          onBlur={handleBlur}
           errors={errors}
           touched={touched}
         />
 
         <span
           className={cn(
-            "ml-3 mt-1.5 block text-base",
-            errors?.["confirm_password"] && "row-flex-start",
+            "ml-2.5 mt-2 hidden text-xs",
+            touched?.["confirm_password"] && "row-flex-start gap-1.5",
           )}
         >
-          <AlertTriangle size={16} className="text-red-500" />
-          {/* {errors?.["confirm_password"]} */}
+          {errors?.["confirm_password"] && touched?.["confirm_password"] ? (
+            <>
+              <AlertTriangle size={16} className="error-text" />
+              <span className="error-text">{errors?.["confirm_password"]}</span>
+            </>
+          ) : (
+            !errors?.["confirm_password"] &&
+            touched?.["confirm_password"] && (
+              <>
+                <CheckCircle size={16} className="success-text" />
+                <span className="success-text">Password Matched</span>
+              </>
+            )
+          )}
         </span>
       </div>
     </FormWrapper>

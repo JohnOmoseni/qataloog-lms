@@ -41,9 +41,6 @@ const config = {
           foreground: "var(--secondary-foreground)",
           100: "var(--secondary-100)",
         },
-        card: {
-          DEFAULT: "var(--card)",
-        },
         grey: {
           DEFAULT: "var(--grey)",
           100: "var(--grey-100)",

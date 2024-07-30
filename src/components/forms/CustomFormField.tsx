@@ -54,18 +54,8 @@ const RenderInput = ({ props }: { props: CustomProps }) => {
   const { field, fieldType, name, onBlur, onChange } = props;
   const placeholder = field?.placeholder ?? "";
 
-  const inputRef = useRef<HTMLInputElement>(null);
-
   const changePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
-
-    if (inputRef.current) {
-      if (!showPassword) {
-        inputRef.current.type = "text";
-      } else {
-        inputRef.current.type = "password";
-      }
-    }
   };
 
   switch (fieldType) {
@@ -73,10 +63,12 @@ const RenderInput = ({ props }: { props: CustomProps }) => {
       return (
         <>
           <Input
-            ref={inputRef}
             placeholder={placeholder}
             name={name}
             {...field}
+            {...(field?.type === "password" && {
+              type: showPassword ? "text" : "password",
+            })}
             value={field?.value as string}
             onChange={onChange}
             onBlur={onBlur}
@@ -140,7 +132,7 @@ const RenderInput = ({ props }: { props: CustomProps }) => {
 };
 
 const CustomFormField = (props: CustomProps) => {
-  const { name, label, errors, touched } = props;
+  const { name, label, field, errors, touched } = props;
 
   const result = (
     <div
@@ -162,9 +154,12 @@ const CustomFormField = (props: CustomProps) => {
     >
       <Label className="mb-2 ml-1 inline-flex">{label}</Label>
       {result}
-      <p className="transition-sm invisible ml-2 mt-1.5 block text-xs font-semibold text-red-500 group-[.is-error]:visible group-[.is-error]:animate-in">
-        {errors?.[name] as string}
-      </p>
+
+      {field?.type !== "password" && (
+        <p className="transition-sm invisible ml-2 mt-1.5 block text-xs font-semibold text-red-500 group-[.is-error]:visible group-[.is-error]:animate-in">
+          {errors?.[name] as string}
+        </p>
+      )}
     </div>
   );
 };

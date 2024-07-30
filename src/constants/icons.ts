@@ -23,6 +23,7 @@ import { TbAlertTriangle as AlertTriangle } from "react-icons/tb";
 
 import logo from "@/images/logo.png";
 import fallback_img from "@/images/profile.png";
+
 import triangle from "@/svgs/triangle.svg";
 import remove from "@/svgs/remove-circle.svg";
 import logout from "@/svgs/logout.svg";

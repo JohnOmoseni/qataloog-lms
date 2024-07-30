@@ -1,12 +1,12 @@
 import clsx from "clsx";
-import Image from "next/image";
 
 import { StatusIcon } from "@/constants";
 import { Status } from "@/types";
 
 export const StatusBadge = ({ status }: { status: Status }) => {
+  const Icon = StatusIcon[status];
   return (
-    <div className={clsx("row-flex-start gap-1")}>
+    <div className={clsx("row-flex-start cursor-pointer gap-1")}>
       {status !== "delete" && (
         <p
           className={clsx("font-medium capitalize", {
@@ -18,17 +18,11 @@ export const StatusBadge = ({ status }: { status: Status }) => {
         </p>
       )}
       <div
-        className={clsx("icon", {
-          "h-6 w-6 rounded-full bg-red-100 p-1": status === "delete",
+        className={clsx({
+          "h-7 w-7 rounded-full bg-red-100 p-1": status === "delete",
         })}
       >
-        <Image
-          src={StatusIcon[status]}
-          alt=""
-          width={20}
-          height={20}
-          className=""
-        />
+        <Icon className="h-fit w-fit" />
       </div>
     </div>
   );

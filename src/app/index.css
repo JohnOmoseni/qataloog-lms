@@ -19,8 +19,6 @@
     --foreground-100: #7d7d80;
     --foreground-variant: #f14119;
 
-    --card: #272d3a;
-
     --secondary: #f14119;
     --secondary-100: #fcd9d1;
     --secondary-foreground: #fafaff;
@@ -34,7 +32,7 @@
     --input: #fefeff;
     --ring: #f14119;
 
-    --muted: #222;
+    --muted: #323232;
     --muted-foreground: #9f9f9f;
 
     --radius: 0.5rem;
@@ -92,11 +90,11 @@
   }
 
   /* TOAST STYLES */
-  .success-toast {
-    @apply bg-green-100 text-green-800;
+  .success-text {
+    @apply font-semibold text-green-500;
   }
-  .error-toast {
-    @apply bg-red-100 text-red-800;
+  .error-text {
+    @apply font-semibold text-red-500;
   }
 
   /* CUSTOM SECTION STYLES */

@@ -19,7 +19,7 @@ export default function PanelLayout({ children }: LayoutProps) {
             <Sidebar />
           </div>
 
-          <div className="flex-1 overflow-hidden py-10 pb-8 md:pt-12">
+          <div className="flex-1 overflow-hidden py-10 md:py-12">
             <div className="w-full max-w-5xl px-5 md:px-10">{children}</div>
           </div>
         </div>

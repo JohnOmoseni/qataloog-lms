@@ -5,14 +5,13 @@ import { motion } from "framer-motion";
 import { sidebarLinks } from "@/constants";
 import { SidebarLinksProp } from "@/types";
 import { usePathname } from "next/navigation";
-import { logout, triangle } from "@/constants/icons";
-import Link from "next/link";
-import Image from "next/image";
+import { logout as Logout, triangle as Triangle } from "@/constants/icons";
 import { Button } from "@/components/CustomButton";
+import Link from "next/link";
 
-const LinkRow = ({ href, icon, label, tag }: SidebarLinksProp) => {
+const LinkRow = ({ href, icon: Icon, label, tag }: SidebarLinksProp) => {
   const link =
-    "group relative w-full row-flex rounded-r-lg leading-none whitespace-nowrap transition-all ";
+    "group relative w-full row-flex rounded-r-lg leading-none whitespace-nowrap transition-all";
   const activeLink = cn(
     link,
     "bg-secondary-100 text-foreground-variant shadow-inner",
@@ -24,27 +23,20 @@ const LinkRow = ({ href, icon, label, tag }: SidebarLinksProp) => {
   return (
     <li className={isActive ? activeLink : link}>
       <Link
-        className="row-flex-start size-full gap-4 p-3 px-[15%] font-semibold"
+        className="nav-link row-flex-start size-full gap-4 p-3 px-[15%] font-semibold transition-all group-hover:scale-105"
         href={href}
       >
-        <Image
-          src={icon}
-          alt="logo"
+        <Icon
           width={24}
           height={24}
-          className={cn(isActive && "brightness-200")}
+          className={cn(isActive && "stroke-variant", "mt-0.5")}
         />
+
         {label}
       </Link>
 
       {isActive && (
-        <Image
-          src={triangle}
-          alt=""
-          width={1000}
-          height={1000}
-          className="absolute -left-3 h-8 w-8 object-contain"
-        />
+        <Triangle className="absolute -left-1 top-1/2 h-fit w-fit -translate-y-1/2" />
       )}
     </li>
   );
@@ -62,7 +54,7 @@ function Sidebar() {
         <Button
           title="Logout"
           btnType="outline"
-          src={logout}
+          icon={Logout}
           className="!px-[4rem] !py-6 !text-lg"
         />
       </div>

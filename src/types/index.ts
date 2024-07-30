@@ -5,7 +5,7 @@ import type { AppDispatch, RootState } from "@/redux/store";
 export type Status = "update" | "edit" | "cancel" | "delete";
 
 export type SidebarLinksProp = React.PropsWithChildren<LinkProps> & {
-  icon: string;
+  icon: any;
   label: string;
   href: string;
   tag?: string;

@@ -20,7 +20,6 @@ const ProfileForm = ({ user }: { user: any }) => {
   const onSubmit = async (values: InferType<typeof ProfileSchema>) => {
     setIsLoading(true);
 
-    let fileUrl;
     console.log(values);
     setIsLoading(false);
   };
@@ -80,7 +79,7 @@ const ProfileForm = ({ user }: { user: any }) => {
         fieldType={FormFieldType.PHONE_INPUT}
         name="phone"
         label="Phone number"
-        field={{ value: values.phone, placeholder: "(234) 81-68461612" }}
+        field={{ value: values.phone }}
         onChange={(value: Value) => {
           setFieldValue("phone", value);
         }}

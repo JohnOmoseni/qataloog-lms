@@ -1,3 +1,14 @@
+/* SVGS */
+.stroke-variant path {
+  stroke: var(--secondary) !important;
+}
+
+.nav-link:hover,
+.nav-link:hover * {
+  color: var(--foreground-variant);
+  stroke: var(--secondary) !important;
+}
+
 /* SCROLLBAR */
 .scrollbar-thin {
   /* #17191e thumb #454e5b track */
@@ -31,7 +42,7 @@
 }
 
 .PhoneInputInput::placeholder {
-  color: var(--foreground);
+  color: var(--grey);
 }
 
 /* Remove scrollbar */
