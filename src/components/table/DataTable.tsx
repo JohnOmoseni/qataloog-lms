@@ -38,7 +38,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="data-table">
-      <Table className="overflow-hidden rounded-lg max-[370px]:text-xs">
+      <Table className="scroll-thin overflow-x-auto overflow-y-hidden rounded-lg max-[370px]:text-xs">
         <TableHeader className="shad-table-row-header">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow
@@ -83,7 +83,7 @@ export function DataTable<TData, TValue>({
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
+              <TableCell colSpan={columns.length} className="h-40 text-center">
                 No results.
               </TableCell>
             </TableRow>

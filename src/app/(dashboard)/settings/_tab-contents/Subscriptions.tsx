@@ -36,19 +36,23 @@ function Subscriptions() {
 
   return (
     <div className="flex-column flex gap-8">
-      <FlagSelect
-        containerStyles="sub-select-flag"
-        customLabels={{
-          NG: { primary: "Nigeria" },
-          FR: { primary: "France" },
-        }}
-      />
+      <div className="max-sm:self-center">
+        <FlagSelect
+          containerStyles="sub-select-flag"
+          customLabels={{
+            NG: { primary: "Nigeria" },
+            FR: { primary: "France" },
+          }}
+        />
+      </div>
 
-      <PricingTabs
-        activeTab={activeTab}
-        changeTab={changeTab}
-        tabIDs={pricingTabIDs}
-      />
+      <div className="row-flex max-sm:self-center md:mt-4">
+        <PricingTabs
+          activeTab={activeTab}
+          changeTab={changeTab}
+          tabIDs={pricingTabIDs}
+        />
+      </div>
 
       <FormWrapper
         buttonLabel="Update"
