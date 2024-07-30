@@ -12,7 +12,7 @@ function Search({ containerStyles }: { containerStyles?: string }) {
       <Input
         value={search}
         placeholder="Search"
-        className="shad-input"
+        className="shad-input !pl-4"
         onChange={(e) => setSearch(e.target.value)}
       />
     </div>

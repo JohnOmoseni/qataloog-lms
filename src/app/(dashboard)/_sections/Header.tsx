@@ -16,7 +16,7 @@ function Header() {
     <div className="relative z-10 min-h-[50px] w-full bg-background-100 px-3 pt-3 shadow-sm max-md:pb-3 md:min-h-[70px]">
       <div className="row-flex-btwn mx-auto gap-4 md:w-[96%]">
         <div
-          className="row-flex group md:hidden"
+          className="row-flex group cursor-pointer md:hidden"
           onClick={() => dispatch(setOpenMenu(true))}
         >
           <Menu size={22} className="transition-all group-hover:scale-95" />
