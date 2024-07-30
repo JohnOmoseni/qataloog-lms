@@ -14,7 +14,7 @@ export default function PanelLayout({ children }: LayoutProps) {
   return (
     <ReduxProvider>
       <LayoutProvider>
-        <div className="flex min-h-dvh w-full flex-col md:flex-row">
+        <div className="flex w-full flex-col md:flex-row">
           <div className="remove-scrollbar relative hidden w-72 overflow-y-auto bg-background-200 shadow-sm md:block">
             <Sidebar />
           </div>
