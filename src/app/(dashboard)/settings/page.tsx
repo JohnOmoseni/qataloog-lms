@@ -30,7 +30,7 @@ function Settings() {
         )}
       </div>
 
-      <div className="mt-8 w-full sm:mt-12">
+      <div className="mt-8 w-full sm:mt-10">
         <TabsPanel activeTab={activeTab} id={tabIDs[0]} idx={0}>
           <Profile />
         </TabsPanel>

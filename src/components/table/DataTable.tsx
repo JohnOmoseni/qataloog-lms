@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/table";
 import { Button } from "../ui/button";
 import { ArrowLeft, ArrowRight, ThreeDots } from "@/constants/icons";
+import FlagSelect from "../FlagSelect";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

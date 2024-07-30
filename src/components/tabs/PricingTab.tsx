@@ -3,7 +3,7 @@ import { TabProps, TabsProps } from "@/types";
 
 export const PricingTabs = ({ activeTab, changeTab, tabIDs }: TabsProps) => {
   return (
-    <div className="row-flex max-sm:self-center">
+    <div className="row-flex mt-4 max-sm:self-center">
       <div className="min-w-max rounded-md border border-border bg-background-100 p-1">
         <ul role="tablist" aria-label="Tabs" className="row-flex-btwn">
           {tabIDs.map((tab, idx) => {

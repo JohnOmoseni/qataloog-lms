@@ -41,7 +41,7 @@ function NavLinks({ label, href, tag, icon: Icon, idx }: NavLinkProps) {
         <motion.span
           className={cn(
             "tracking-snug font-semibold capitalize",
-            isActive && "text-foreground",
+            isActive && "text-foreground-variant",
           )}
         >
           {label}

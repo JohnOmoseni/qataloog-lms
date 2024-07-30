@@ -3,6 +3,7 @@
 import AvatarWrapper from "@/components/ui/components/AvatarWrapper";
 import Image from "next/image";
 import Link from "next/link";
+import FlagSelect from "@/components/FlagSelect";
 
 import { logo, Menu } from "@/constants/icons";
 import { setOpenMenu } from "@/redux/features/appSlice";
@@ -32,18 +33,24 @@ function Header() {
           />
         </Link>
 
-        <Link href="#" className="row-flex gap-2.5">
-          <div className="relative">
-            <AvatarWrapper />
-
-            <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full outline outline-1 outline-offset-1 outline-green-400">
-              <span className="absolute inset-0 animate-pulse rounded-full border border-white/50 bg-green-500" />
-            </div>
+        <div className="row-flex gap-6">
+          <div className="hidden md:block">
+            <FlagSelect containerStyles="remove-border" />
           </div>
-          <p className="w-full break-words text-sm font-semibold sm:text-base">
-            Qatar <br className="block min-[350px]:hidden" /> Admin
-          </p>
-        </Link>
+
+          <Link href="#" className="row-flex gap-2.5">
+            <div className="relative">
+              <AvatarWrapper />
+
+              <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full outline outline-1 outline-offset-1 outline-green-400">
+                <span className="absolute inset-0 animate-pulse rounded-full border border-white/50 bg-green-500" />
+              </div>
+            </div>
+            <p className="w-full break-words text-sm font-medium sm:text-base">
+              Qatar <br className="block min-[350px]:hidden" /> Admin
+            </p>
+          </Link>
+        </div>
       </div>
     </div>
   );

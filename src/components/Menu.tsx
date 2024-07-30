@@ -16,7 +16,7 @@ function Menu() {
   return (
     <motion.div
       style={{ zIndex: 9999 }}
-      className="fixed inset-0 block h-dvh w-full bg-black/30 backdrop-blur-sm md:hidden"
+      className="fixed inset-0 block h-svh w-full overflow-hidden bg-black/30 backdrop-blur-sm md:hidden"
       {...animateFn(revealMenu)}
       onClick={() => dispatch(setOpenMenu(false))}
     >

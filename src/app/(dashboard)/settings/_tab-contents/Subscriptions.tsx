@@ -1,5 +1,6 @@
 "use client";
 
+import FlagSelect from "@/components/FlagSelect";
 import CustomFormField, {
   FormFieldType,
 } from "@/components/forms/CustomFormField";
@@ -25,7 +26,7 @@ function Subscriptions() {
 
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues: {
-      monthly_plan: "",
+      monthly_plan: "4",
       daily_plaan: "120",
       fee: "5000",
     },
@@ -35,6 +36,14 @@ function Subscriptions() {
 
   return (
     <div className="flex-column flex gap-8">
+      <FlagSelect
+        containerStyles="sub-select-flag"
+        customLabels={{
+          NG: { primary: "Nigeria" },
+          FR: { primary: "France" },
+        }}
+      />
+
       <PricingTabs
         activeTab={activeTab}
         changeTab={changeTab}

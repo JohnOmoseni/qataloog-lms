@@ -1,6 +1,7 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { EarningsDataType } from "./data";
 import { StatusBadge } from "../StatusBadge";
+import FlagSelect from "../FlagSelect";
 
 export const columns: ColumnDef<EarningsDataType>[] = [
   {
@@ -45,6 +46,24 @@ export const columns: ColumnDef<EarningsDataType>[] = [
           <StatusBadge status="delete" />
         </div>
       );
+    },
+  },
+  {
+    id: "#",
+    header: () => (
+      <div className="capitalize">
+        <FlagSelect
+          containerStyles="table-select-flag"
+          customLabels={{
+            NG: { primary: "Nigeria" },
+            FR: { primary: "France" },
+          }}
+        />
+      </div>
+    ),
+
+    cell: ({ row }) => {
+      return <div className="min-w-[80px]"></div>;
     },
   },
 ];

@@ -9,6 +9,53 @@
   stroke: var(--secondary) !important;
 }
 
+.shad-table-row-header th:has(.select-field) {
+  padding-left: 0 !important;
+}
+
+/* FLAG_SELECT */
+:is(.sub-select-flag) {
+  height: 3rem !important;
+  padding-inline: 0.8rem !important;
+  background: var(--background-100) !important;
+}
+:is(.sub-select-flag .ReactFlagsSelect-module_selectValue__152eS) {
+  padding: 0 !important;
+}
+:is(.table-select-flag + .ReactFlagsSelect-module_fullWidthOptions__1XeR6) {
+  right: 0 !important;
+}
+
+.ReactFlagsSelect-module_selectOptions__3LNBJ {
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 6px 0 !important;
+  margin-top: 6px !important;
+}
+.ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
+  right: -25px !important;
+}
+.ReactFlagsSelect-module_selectBtn__19wW7:after {
+  border-top-color: var(--grey) !important;
+  margin-top: 3px !important;
+}
+.ReactFlagsSelect-module_selectFlag__2q5gC {
+  border-radius: 999px !important;
+  overflow: hidden !important;
+}
+.ReactFlagsSelect-module_selectFlag__2q5gC svg {
+  width: 1.5em !important;
+  height: 1.2em !important;
+  clip-path: circle() !important;
+}
+.remove-border {
+  border: none !important;
+  box-shadow: none !important;
+}
+.flags-select {
+  padding-block: 0 !important;
+}
+
 /* SCROLLBAR */
 .scrollbar-thin {
   /* #17191e thumb #454e5b track */
@@ -49,7 +96,6 @@
 .remove-scrollbar::-webkit-scrollbar {
   width: 0px;
   height: 0px;
-  border-radius: 0px;
 }
 
 .remove-scrollbar::-webkit-scrollbar-track {
