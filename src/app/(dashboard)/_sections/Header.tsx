@@ -53,7 +53,7 @@ function Header() {
                 <span className="absolute inset-0 animate-pulse rounded-full border border-white/50 bg-green-500" />
               </div>
             </div>
-            <p className="line-clamp-2 w-[8ch] text-sm font-medium max-[380px]:w-[6ch] sm:text-base">
+            <p className="line-clamp-2 text-sm font-medium max-[380px]:w-[6ch] min-[380px]:min-w-[8ch] sm:text-base">
               Qatar Admin
             </p>
           </Link>
