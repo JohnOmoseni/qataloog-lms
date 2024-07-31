@@ -94,7 +94,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="data-table">
-      <Table className="scroll-thin min-h-[250px] overflow-x-auto rounded-lg max-[370px]:text-xs">
+      <Table className="scroll-thin min-h-[120px] overflow-x-auto rounded-lg max-[370px]:text-xs">
         <TableHeader className="shad-table-row-header">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id} className="bg-background-100 py-2">
