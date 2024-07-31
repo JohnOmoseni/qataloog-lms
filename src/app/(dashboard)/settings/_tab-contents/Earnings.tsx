@@ -35,7 +35,7 @@ function Earnings() {
             onChange={(e) => {
               setValue(Number(e.target.value));
             }}
-            className="shad-input !h-7 min-w-[100px] !rounded-md !bg-input !px-1.5"
+            className="shad-input !h-7 min-w-[100px] !rounded-md !bg-input !px-1.5 !text-foreground"
           />
 
           <div className="flex gap-1">
