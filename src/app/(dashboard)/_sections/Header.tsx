@@ -35,19 +35,26 @@ function Header() {
 
         <div className="row-flex gap-6">
           <div className="hidden md:block">
-            <FlagSelect containerStyles="remove-border" />
+            <FlagSelect
+              containerStyles="remove-border"
+              customLabels={{
+                NG: { primary: "English" },
+                SN: { primary: "French" },
+                IT: { primary: "Italian" },
+              }}
+            />
           </div>
 
           <Link href="#" className="row-flex gap-2.5">
             <div className="relative">
               <AvatarWrapper />
 
-              <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full outline outline-1 outline-offset-1 outline-green-400">
+              <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full outline outline-1 outline-offset-0 outline-green-50/70">
                 <span className="absolute inset-0 animate-pulse rounded-full border border-white/50 bg-green-500" />
               </div>
             </div>
-            <p className="w-full break-words text-sm font-medium sm:text-base">
-              Qatar <br className="block min-[350px]:hidden" /> Admin
+            <p className="line-clamp-2 w-[8ch] text-sm font-medium max-[380px]:w-[6ch] sm:text-base">
+              Qatar Admin
             </p>
           </Link>
         </div>

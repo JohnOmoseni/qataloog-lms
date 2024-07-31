@@ -9,12 +9,10 @@ import {
 import {
   MdOutlineKeyboardArrowLeft as ArrowLeft,
   MdOutlineKeyboardArrowRight as ArrowRight,
-  MdOutlineKeyboardArrowUp as ArrowUp,
-  MdOutlineKeyboardArrowDown as ArrowDown,
 } from "react-icons/md";
+import { FiArrowUp as ArrowUp, FiArrowDown as ArrowDown } from "react-icons/fi";
 import { AiOutlineCheckCircle as CheckCircle } from "react-icons/ai";
 import { PiDotsThreeOutlineFill as ThreeDots } from "react-icons/pi";
-import { FaArrowUpLong as ArrowLong } from "react-icons/fa6";
 import {
   IoEyeOffOutline as EyeOff,
   IoEyeOutline as Eye,
@@ -23,7 +21,6 @@ import { TbAlertTriangle as AlertTriangle } from "react-icons/tb";
 
 import logo from "@/images/logo.png";
 import fallback_img from "@/images/profile.png";
-
 import triangle from "@/svgs/triangle.svg";
 import remove from "@/svgs/remove-circle.svg";
 import logout from "@/svgs/logout.svg";

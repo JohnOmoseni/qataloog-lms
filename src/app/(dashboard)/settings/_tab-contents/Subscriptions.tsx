@@ -37,13 +37,7 @@ function Subscriptions() {
   return (
     <div className="flex-column flex gap-8">
       <div className="max-sm:self-center">
-        <FlagSelect
-          containerStyles="sub-select-flag"
-          customLabels={{
-            NG: { primary: "Nigeria" },
-            FR: { primary: "France" },
-          }}
-        />
+        <FlagSelect containerStyles="sub-select-flag" />
       </div>
 
       <div className="row-flex max-sm:self-center md:mt-4">

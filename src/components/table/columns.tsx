@@ -1,25 +1,29 @@
+"use client";
+
 import { ColumnDef } from "@tanstack/react-table";
 import { EarningsDataType } from "./data";
 import { StatusBadge } from "../StatusBadge";
 import FlagSelect from "../FlagSelect";
+import EditableRateCell from "./EditableRateCell";
+import SelectDropdown from "./LevelCell";
 
 export const columns: ColumnDef<EarningsDataType>[] = [
   {
     header: "s/n",
     cell: ({ row }) => <p className="table-data-sm">{row.index + 1}</p>,
+    size: 100,
   },
 
   {
     accessorKey: "level",
     header: "Academic Level",
-    cell: ({ row }) => {
-      return <p className="table-data-sm row-flex">{row.original.level}</p>;
-    },
+    cell: SelectDropdown,
+    enableSorting: false, // disable sorting
   },
   {
     accessorKey: "rate",
     header: "Rate",
-    cell: ({ row }) => <p className="table-data-sm">{row.original.rate}</p>,
+    cell: EditableRateCell,
   },
   {
     accessorKey: "created_at",
@@ -52,13 +56,7 @@ export const columns: ColumnDef<EarningsDataType>[] = [
     id: "#",
     header: () => (
       <div className="capitalize">
-        <FlagSelect
-          containerStyles="table-select-flag"
-          customLabels={{
-            NG: { primary: "Nigeria" },
-            FR: { primary: "France" },
-          }}
-        />
+        <FlagSelect containerStyles="table-select-flag" />
       </div>
     ),
 

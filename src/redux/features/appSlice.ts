@@ -5,6 +5,7 @@ type StateProp = {
   screenSize: number;
   isAuthenticated: boolean;
   isNetwork: boolean;
+  filters: string;
 };
 
 const initialAppState: StateProp = {
@@ -12,6 +13,7 @@ const initialAppState: StateProp = {
   screenSize: 0,
   isAuthenticated: true,
   isNetwork: true,
+  filters: "",
 };
 
 const appSlice = createSlice({
@@ -30,9 +32,17 @@ const appSlice = createSlice({
     setNetwork: (state, { payload }) => {
       state.isNetwork = payload;
     },
+    setFilters: (state, { payload }) => {
+      state.filters = payload;
+    },
   },
 });
 
 export default appSlice.reducer;
-export const { setScreenSize, setOpenMenu, setIsAuthenticated, setNetwork } =
-  appSlice.actions;
+export const {
+  setScreenSize,
+  setOpenMenu,
+  setIsAuthenticated,
+  setNetwork,
+  setFilters,
+} = appSlice.actions;

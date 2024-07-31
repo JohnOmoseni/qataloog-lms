@@ -23,6 +23,23 @@ export const tabIDs = [
 
 export const pricingTabIDs = ["Termly", "Bi-Annually", "Annually"];
 
+export const primaryLevels = [
+  "Primary 1",
+  "Primary 2",
+  "Primary 3",
+  "Primary 4",
+  "Primary 5",
+  "Primary 6",
+];
+
+const test = [
+  {
+    id: 1,
+    value: "JS 1",
+    color: "green.300",
+  },
+];
+
 export const StatusIcon = {
   update: update,
   edit: edit,

@@ -14,15 +14,16 @@ const FlagSelect = ({
   const [selected, setSelected] = useState("NG");
 
   const defaultLabels = {
-    NG: { primary: "English" },
-    FR: { primary: "French" },
-    IT: { primary: "Italian" },
+    NG: { primary: "Nigeria" },
+    FR: { primary: "France" },
+    SN: { primary: "Senegal" },
+    IT: { primary: "Italy" },
   };
 
   return (
     <ReactFlagsSelect
       selected={selected}
-      countries={["FR", "NG", "IT"]}
+      countries={["FR", "NG", "IT", "SN"]}
       customLabels={customLabels ? customLabels : defaultLabels}
       onSelect={(code) => setSelected(code)}
       placeholder="Select Language"

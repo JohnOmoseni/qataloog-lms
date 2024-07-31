@@ -13,8 +13,8 @@ function Earnings() {
   const rate = 10;
 
   return (
-    <div className="relative pb-[4rem]">
-      <DataTable columns={columns} data={earningsData} />
+    <div className="pb-[4rem]">
+      <DataTable columns={columns} tableData={earningsData} />
 
       <div className="row-flex-btwn my-6 flex gap-4 max-[450px]:flex-col">
         <Button

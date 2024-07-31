@@ -2,18 +2,25 @@
 
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { setFilters } from "@/redux/features/appSlice";
+import { useAppDispatch, useAppSelector } from "@/types";
 
-function Search({ containerStyles }: { containerStyles?: string }) {
-  const [search, setSearch] = useState("");
+type SearchProps = {
+  containerStyles?: string;
+  // filters: string;
+  // setFilters: Dispatch<SetStateAction<string>>;
+};
 
+function Search({  containerStyles }: SearchProps) {
+  const dispatch = useAppDispatch();
+  const {filters} = useAppSelector(state => state.appState)
   return (
     <div className={cn(containerStyles)}>
       <Input
-        value={search}
+        value={filters}
         placeholder="Search"
         className="shad-input !pl-4"
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => dispatch(setFilters(e.target.value))}
       />
     </div>
   );
